@@ -10,14 +10,12 @@ import { Rental } from '../shared/rental.model';
 export class RentalListComponent implements OnInit {
 
   rentals: Rental[] = [];
-
+  
   constructor(private rentalService: RentalService) { }
 
   ngOnInit() {
-    debugger;
-    const rentalObservable = this.rentalService.getRentails();
+    const rentalObservable = this.rentalService.getRentals();
 
-    debugger;
     rentalObservable.subscribe(
       (rentals: Rental[]) => {
 

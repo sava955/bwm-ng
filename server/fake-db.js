@@ -7,9 +7,9 @@ class FakeDb {
                 title: 'Modern apartment in center',
                 city: 'New York',
                 street: 'Time Square',
-                category: 'apartmant',
-                img: 'http://via.placeholder.com/350x250',
-                badrooms: 3,
+                category: 'apartment',
+                image: 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                bedrooms: 3,
                 description: 'Very nice apartmant',
                 dailyRate: 34,
                 shared: false,
@@ -20,8 +20,8 @@ class FakeDb {
                 city: 'San Francisco',
                 street: 'Time Square',
                 category: 'condo',
-                img: 'http://via.placeholder.com/350x250',
-                badrooms: 2,
+                image: 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                bedrooms: 2,
                 description: 'Very nice apartmant',
                 dailyRate: 12,
                 shared: true,
@@ -32,10 +32,10 @@ class FakeDb {
                 city: 'Bratislava',
                 street: 'Hlavna',
                 category: 'condo',
-                img: 'http://via.placeholder.com/350x250',
-                badrooms: 2,
+                image: 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                bedrooms: 2,
                 description: 'Very nice apartmant',
-                dailyRate: 334,
+                dailyRate: 34,
                 shared: true,
                 createdOut: "24/12/2017"
             },
@@ -44,8 +44,8 @@ class FakeDb {
                 city: 'Berlin',
                 street: 'Haupt Strasse',
                 category: 'house',
-                img: 'http://via.placeholder.com/350x250',
-                badrooms: 9,
+                image: 'https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                bedrooms: 9,
                 description: 'Very nice apartmant',
                 dailyRate: 33,
                 shared: false,
@@ -64,7 +64,7 @@ class FakeDb {
             const newRental = new Rental(rental);
 
             newRental.save();
-        })
+        });
     }
 
     seedDb() {
