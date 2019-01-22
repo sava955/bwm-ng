@@ -10,7 +10,7 @@ import { Rental } from '../shared/rental.model';
 })
 export class RentalDetailComponent implements OnInit {
 
-  currentId: number;
+  currentId: string;
   rental: Rental;
 
   constructor(private route: ActivatedRoute, private rentalService: RentalService) { }
@@ -24,8 +24,8 @@ export class RentalDetailComponent implements OnInit {
       });
   }
 
-  getRental(rentalId: number) {
-    this.rentalService.getRentalId(rentalId).subscribe(
+  getRental(rentalId: string) {
+    this.rentalService.getRentalById(rentalId).subscribe(
       (rental: Rental) => {
         this.rental = rental;
       });
