@@ -19,7 +19,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    TempComponent
+    TempComponent,
   ],
   imports: [
     BrowserModule,
