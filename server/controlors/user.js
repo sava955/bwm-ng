@@ -58,7 +58,7 @@ exports.register = function (req, res) {
 
         user.save(function (err) {
             if (err) {
-                return res.status(422).send({ erros: normalizeErrors(err.errors) });
+                return res.status(422).send({ errors: normalizeErrors(err.errors) });
             }
 
             return res.json({ 'registered': true });
@@ -74,7 +74,7 @@ exports.authMiddleware = function (req, res, next) {
 
         User.findById(user.userId, function(err, user) {
             if(err) {
-                return res.status(422).send({ erros: normalizeErrors(err.errors) });
+                return res.status(422).send({ errors: normalizeErrors(err.errors) });
             }
             if(user) {
                 res.locals.user = user;
